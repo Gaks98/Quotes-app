@@ -25,7 +25,15 @@ public date = new Date;
     //this.date = new Date(quote.date)
     this.quotes.push(quote)
   }
-  
+  upVote : number = 0;
+  downVote : number = 0;
+
+  up(){
+    this.upVote ++;
+  }
+  down(){
+    this.downVote ++;
+  }
   constructor() { }
 
   ngOnInit() {
