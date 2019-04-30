@@ -2,5 +2,8 @@
 <hr>
 
 <ul>
-  <li *ngFor='let goal of goals'>{{goal.name}}</li>
+  <div *ngFor='let quote of quotes'>
+  <li>{{quote.quoted}}</li>
+  <app-quote-details [quote]='quote'></app-quote-details>
+</div>
 </ul>
