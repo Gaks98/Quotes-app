@@ -4,7 +4,7 @@
 <ul>
   <div *ngFor='let quote of quotes'>
   <li appHighlight >{{quote.quoted}}</li>
-  <li >{{quote.timeTracker|date}}</li>
+  <li >{{date | date:"HH:mm"}}</li>
   <app-quote-details [quote]='quote'></app-quote-details>
 </div>
 </ul>
