@@ -1,0 +1,51 @@
+
+#center {
+    position: relative;
+    background: #060c21;
+    border: 2px solid #000;
+    margin-top: 20px;
+    color:#fff;
+  }
+  
+  #center::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+  }
+  
+  #center::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+  
+  .form-group {
+    position: relative;
+    padding: 5px;
+    transform: translateY(40px);
+  }
+  
+  .btn {
+    position: relative;
+    margin: 20px 0 0 60px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: 0.5s;
+    transform: translateX(-40px);
+  }
+  
+  .btn:hover {
+    transform: translateX(0);
+  }

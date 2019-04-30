@@ -1,17 +1,118 @@
+<div class="card" style="width:100%">   
+    <div class = "rectangle">  
+         <header>
+                 <div class="title">
+                   <h1>Quote World!</h1>
+                   <a href="#s1"><p>click to Compose!</p></a>
+                 </div>
+               </header>   
+     
+     <div class="menu">
+                 <a href="#" class="brand"><img src="https://bit.ly/2vth87j"></a>
+                 <nav>
+                    
+                     <ul>
+                         <li><a href="#">Author</a></li>
+                         <li><a href="#">collections</a></li>
+                         <li><a href="#">Quotes</a></li>
+                         <li><a href="#">Compose</a></li>
+                         <li><a href="#">Share</a></li>
+                         <li><a href="#">Contact</a></li>
+                     </ul>
+                 </nav>
+             </div>
+             <section></section>
+         </div>
+         <pre> <br> <i class="fas fa-bars"></i>                                COLLECTION
+         </pre>
+     
+     </div>
+
+             
+         <div class="container-fluid">
+                 <div class="row">
+                         <div class="col-sm-4">
+                 <div class="card" style="width:400px;">
+                   <img class="card-img-top" 
+                   src="https://bit.ly/2UI5C2n" alt="Card image" >
+                   
+                   <div class="module mid">
+                         <h4>15 Outrageuos Quotes from Lily Wayne</h4>
+                       </div>
+                       
+                       
+                      
+                   <div class="card-body">
+                     <pre><i class="fas fa-info-circle"></i>                                 <i class="fas fa-thumbs-up"></i>  <i class="fas fa-thumbs-down"></i></pre>
+                   </div>
+                 </div>
+                         </div>
+                 
+                 <div class="col-sm-4">
+                 <div class="card" style="width:400px;">
+                         <img class="card-img-top" src="https://bit.ly/2V6g6gO"
+                          alt="Card image" style="width:100%;">
+                         <div class="module mid">
+                                 <h4>Workout Quotes</h4>
+                               </div>
+                         <div class="card-body">
+                           <pre><i class="fas fa-info-circle"></i>                                  <i class="fas fa-thumbs-up"></i>  <i class="fas fa-thumbs-down"></i></pre>
+                         </div>
+                       </div>
+                     </div>
+                     
+                     
+
+                       <div class="col-sm-4">
+                       <div class="card" style="width:400px;">
+                             
+                             <div class="module mid">
+                                     <h4>15 Politics Quotes</h4>
+                                   </div><img class="card-img-top"
+                                   src="https://bit.ly/2PBJgP6" alt="Card image" style="width:100%">
+                             <div class="card-body">
+                               <pre><i class="fas fa-info-circle"></i>                                   <i class="fas fa-thumbs-up"></i>  <i class="fas fa-thumbs-down"></i></pre>
+                             </div>
+                           </div>
+                         </div>
+
+                         </div>
+                     </div>
+
+               
+             <hr>
+
+
+
+
 <h1>Compose or Write Quote</h1>
 <div class="container">
     <div class="row">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)" id = "s1"></app-quote-form>
     </div>
 </div>
 
 <h1>Quotes</h1>
 <hr>
 
-<ul>
-  <div *ngFor='let quote of quotes'>
-  <li appHighlight >{{quote.quoted}}</li>
-  <li >{{date | date:"HH:mm"}}</li>
-  <app-quote-details [quote]='quote'></app-quote-details>
-</div>
-</ul>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-sm-4">
+    <div class="card" style="width:400px;">
+      <img class="card-img-top" 
+      src="https://bit.ly/2VyJ60s" alt="Card image" >
+      
+      <div class="module mid">
+            <div *ngFor='let quote of quotes' id="s1">
+                <h4>{{quote.quoted}}</h4>
+              
+               
+                <app-quote-details [quote]='quote'></app-quote-details>
+              </div>
+          </div>
+    </div>
+
+  </div>
+  </div>
+  </div>

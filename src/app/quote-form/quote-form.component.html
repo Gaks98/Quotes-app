@@ -1,5 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="center">
+      
         <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
             
             <div class="form-group">
@@ -15,7 +16,7 @@
             </div>
 
             <div class="form-group">
-                <label for="author">Author</label>
+                <label for="author">Author</label><br>
                 <input type='name' id="author" #author="ngModel" required
                 [(ngModel)]="newQuote.author" name="author">
 
@@ -36,7 +37,19 @@
                   </div>
 
             </div>
+           <a href="#s2"> <button type="Submit" class="btn btn-success btn-lg"
+            (click)="submitQuote()">Add Quote</button></a>
             
+   
+           <!-- <h4>Quote:</h4>
+            <h5>
+              <i></i> <br><br><span class="text-center">&mdash;
+                 {{newQuote.author}}</span></h5>-->
         </form>
+
+
     </div>
+    
 </div>
+
+

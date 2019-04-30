@@ -12,11 +12,20 @@ export class QuoteComponent implements OnInit {
 public date = new Date;
 
   quotes = [
-    new Quote(1,"Respect","Job", ""),
-    new Quote(2,"Respect","Job", ""),
-    new Quote(3,"Respect","Job", ""),
+    new Quote(1,"","", ""),
+    new Quote(2,"","", ""),
+    new Quote(3,"","", ""),
   ]
 
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  addNewQuote(quote){
+    //this.date = new Date(quote.date)
+    this.quotes.push(quote)
+  }
+  
   constructor() { }
 
   ngOnInit() {
