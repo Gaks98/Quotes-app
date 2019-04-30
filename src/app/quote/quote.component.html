@@ -3,7 +3,7 @@
 
 <ul>
   <div *ngFor='let quote of quotes'>
-  <li>{{quote.quoted}}</li>
+  <li appHighlight >{{quote.quoted}}</li>
   <app-quote-details [quote]='quote'></app-quote-details>
 </div>
 </ul>
